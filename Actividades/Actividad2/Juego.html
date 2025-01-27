@@ -1,0 +1,122 @@
+<!-- Este es un juego que ya habia hecho para una clase de niños en la Escuela donde laburo -->
+
+
+
+<!------------------------------------------------------------------------------------------------------>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Star</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #87CEEB;
+            font-family: Arial, sans-serif;
+        }
+
+        .game-area {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: #ffffff;
+            border: 5px solid #FFD700;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #FFD700;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 0 10px #FFD700;
+        }
+
+        .score {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="game-area" id="gameArea">
+            <div class="star" id="star"></div>
+        </div>
+        <div class="score" id="score">Score: 0</div>
+        <button class="button" id="restartButton">Restart</button>
+    </div>
+
+    <script>
+        const star = document.getElementById('star');
+        const gameArea = document.getElementById('gameArea');
+        const scoreDisplay = document.getElementById('score');
+        const restartButton = document.getElementById('restartButton');
+
+        let score = 0;
+
+        function getRandomPosition() {
+            const areaWidth = gameArea.offsetWidth;
+            const areaHeight = gameArea.offsetHeight;
+            const starSize = star.offsetWidth;
+
+            const x = Math.floor(Math.random() * (areaWidth - starSize));
+            const y = Math.floor(Math.random() * (areaHeight - starSize));
+
+            return { x, y };
+        }
+
+        function moveStar() {
+            const { x, y } = getRandomPosition();
+            star.style.left = `${x}px`;
+            star.style.top = `${y}px`;
+        }
+
+        function increaseScore() {
+            score++;
+            scoreDisplay.textContent = `Score: ${score}`;
+            moveStar();
+        }
+
+        function restartGame() {
+            score = 0;
+            scoreDisplay.textContent = `Score: ${score}`;
+            moveStar();
+        }
+
+        star.addEventListener('click', increaseScore);
+        restartButton.addEventListener('click', restartGame);
+
+        // Initialize the game
+        moveStar();
+    </script>
+</body>
+</html>
