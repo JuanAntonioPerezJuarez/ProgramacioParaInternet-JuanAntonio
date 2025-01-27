@@ -26,7 +26,7 @@ nav
 
 article
 {
-    height: 170%;
+    height: 100 em;
     width: 80%;
     background-color: #E5EFC1;
     display: block;
@@ -34,6 +34,7 @@ article
     margin: 0 10%;
     padding: 1em;
     text-align: justify;
+    border: solid 5px #39AEA9;
 }
 
 p
@@ -82,4 +83,21 @@ h3
 {
     color: #557b83;
     background-color: #E5EFC1;
+}
+
+a
+{
+    color: #557b83;
+    background-color: #E5EFC1;
+    text-decoration: none;
+}
+
+img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    height: 15%;
+    border: solid 3px #39AEA9;
 }
