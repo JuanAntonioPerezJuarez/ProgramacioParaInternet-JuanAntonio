@@ -5,6 +5,7 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #557b83;
     color: #1e2729;
+    text-align: justify;
 }
 
 nav
@@ -25,7 +26,7 @@ nav
 
 article
 {
-    height: 80%;
+    height: 170%;
     width: 80%;
     background-color: #E5EFC1;
     display: block;
@@ -40,6 +41,7 @@ p
     margin: 1.5em;
     padding: 1.5 rem;
     text-align: justify;
+    background-color: #E5EFC1;
 }
 
 footer
@@ -48,7 +50,7 @@ footer
     width: 100%;
     background-color: #39AEA9;
     display: inline-block;
-    padding: 1%;
+    position:bottom;
 }
 
 
@@ -57,4 +59,27 @@ footer
     font-size: 9px;
     text-align: right;
     background-color: #39AEA9;
+    display: inline-block;
+}
+
+h2
+{
+    text-align: center;
+    background-color: #E5EFC1;
+    padding: 1rem;
+
+}
+
+h3
+{
+    text-align: center;
+    background-color: #E5EFC1;
+    padding: 1rem;
+    
+}
+
+.MiniTitulo
+{
+    color: #557b83;
+    background-color: #E5EFC1;
 }
