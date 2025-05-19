@@ -1,0 +1,169 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Titillium+Web:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 354 75% 45%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 19%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 75%;
+
+    --accent: 0 0% 25%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 18%;
+    --ring: 0 84% 60%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-challenger-black text-foreground font-titillium;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-racing;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);
+  }
+  
+  .timeline-item {
+    @apply relative cursor-pointer transition-all duration-300 ease-in-out;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    @apply absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-challenger-red;
+  }
+  
+  .timeline-item::after {
+    content: '';
+    @apply absolute top-2 left-1/2 -translate-x-1/2 w-0.5 h-full bg-gray-700;
+  }
+  
+  .timeline-item:last-child::after {
+    @apply hidden;
+  }
+  
+  .timeline-item:hover {
+    @apply -translate-y-1 scale-105;
+  }
+  
+  .media-card {
+    @apply overflow-hidden relative transition-transform duration-300 ease-in-out hover:scale-105;
+  }
+  
+  .button-primary {
+    @apply bg-challenger-red text-white px-5 py-2.5 rounded-md font-semibold hover:bg-red-800 transition-colors duration-200;
+  }
+  
+  .button-secondary {
+    @apply bg-challenger-gray text-white px-5 py-2.5 rounded-md font-semibold hover:bg-gray-700 transition-colors duration-200;
+  }
+  
+  .input-field {
+    @apply bg-challenger-darkgray text-white border border-challenger-gray rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-challenger-red;
+  }
+  
+  .select-field {
+    @apply bg-challenger-darkgray text-white border border-challenger-gray rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-challenger-red;
+  }
+  
+  .card-hover {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+  
+  .card-hover::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-t from-challenger-black to-transparent opacity-0 transition-opacity duration-300;
+  }
+  
+  .card-hover:hover::after {
+    @apply opacity-100;
+  }
+  
+  .card-hover:hover .card-content {
+    @apply bottom-0 opacity-100;
+  }
+  
+  .card-content {
+    @apply absolute bottom-[-100%] left-0 right-0 bg-gradient-to-t from-challenger-black to-transparent p-4 transition-all duration-300 opacity-0;
+  }
+  
+  .slider-thumb {
+    @apply appearance-none w-5 h-5 rounded-full bg-challenger-red cursor-pointer;
+  }
+  
+  .slider-track {
+    @apply appearance-none h-1 rounded bg-challenger-gray;
+  }
+  
+  input[type="range"] {
+    @apply appearance-none bg-challenger-gray h-1 rounded;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    @apply slider-thumb;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    @apply slider-thumb;
+  }
+  
+  .progress-bar {
+    @apply bg-challenger-gray h-2 rounded-full overflow-hidden;
+  }
+  
+  .progress-bar-inner {
+    @apply bg-challenger-red h-full rounded-full transition-all duration-300;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1E1E1E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C41E3A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b01b35;
+}
