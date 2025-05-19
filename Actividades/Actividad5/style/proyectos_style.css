@@ -1,0 +1,734 @@
+/* Corregimos los estilos del header y su interacción con el contenido */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #00B8C8;
+    --secondary: #F15A40;
+    --neutral-light: #FFFFFF;
+    --neutral-dark: #2E3A47;
+    --accent: #F4A261;
+}
+/* Establecemos un espacio para el header fijo */
+body {
+    padding-top: 80px; /* Altura del header */
+    font-family: 'Poppins', sans-serif;
+    color: var(--neutral-dark);
+    line-height: 1.6;
+}
+
+/* Aseguramos que el header tenga un estilo consistente */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Altura fija para el header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Ajustamos la sección hero para que no tenga margen superior adicional */
+.projects-hero {
+    height: 50vh; /* Altura de la sección hero */
+    background-image: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 0; /* Eliminamos el margen que estaba causando problemas */
+}
+
+/* Aseguramos que los enlaces de navegación tengan el estilo correcto */
+nav ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--neutral-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--primary);
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+/* Aseguramos que el botón CTA tenga el estilo correcto */
+.cta-button .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-outline {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background-color: transparent;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: var(--neutral-light);
+}
+
+/* Ajuste responsivo para el header */
+@media (max-width: 768px) {
+    header {
+        padding: 0 3%;
+        height: 70px;
+    }
+    
+    body {
+        padding-top: 70px;
+    }
+    
+    .logo svg {
+        width: 35px;
+        height: 35px;
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+    
+    .cta-button .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        display: none; /* En móviles podríamos ocultar la navegación y mostrar un menú hamburguesa */
+    }
+    
+    /* Aquí se podría añadir un botón de menú hamburguesa */
+    /* Por simplicidad, solo ocultamos la navegación en esta versión */
+}
+
+/* Additional styles specific to the projects page */
+
+/* Projects Hero Section */
+.projects-hero {
+    height: 50vh;
+    background-image: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 80px; /* To account for the fixed header */
+}
+
+.projects-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.projects-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+    color: var(--neutral-light);
+}
+
+.projects-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.projects-hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Projects Filter */
+.projects-filter {
+    padding: 2rem 5%;
+    background-color: var(--neutral-light);
+    border-bottom: 1px solid #eee;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--neutral-dark);
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    color: var(--primary);
+}
+
+.filter-btn.active {
+    background-color: var(--primary);
+    color: var(--neutral-light);
+}
+
+/* Projects Grid */
+.projects-grid {
+    padding: 4rem 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3rem;
+    background-color: #f8f8f8;
+}
+
+.project-item {
+    background-color: var(--neutral-light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-image-container {
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-item:hover .project-image-container img {
+    transform: scale(1.05);
+}
+
+.project-details {
+    padding: 1.5rem;
+}
+
+.project-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--neutral-dark);
+}
+
+.project-category {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-location {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Featured Project Section */
+.featured-project {
+    padding: 5rem 5%;
+    background-color: var(--primary);
+    color: var(--neutral-light);
+}
+
+.featured-project-content {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.featured-project-text {
+    flex: 1;
+}
+
+.featured-label {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--neutral-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.featured-project-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.featured-project-text p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.featured-project-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-label {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+}
+
+.detail-value {
+    font-weight: 500;
+}
+
+.featured-project-gallery {
+    flex: 1.5;
+}
+
+.gallery-main {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-main img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.gallery-thumbnails img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-thumbnails img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Banner */
+.contact-banner {
+    padding: 5rem 5%;
+    background-color: var(--neutral-dark);
+    color: var(--neutral-light);
+    text-align: center;
+}
+
+.contact-banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .featured-project-content {
+        flex-direction: column;
+    }
+    
+    .featured-project-text {
+        order: 2;
+    }
+    
+    .featured-project-gallery {
+        order: 1;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .featured-project-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-thumbnails {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .gallery-thumbnails img:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-hero {
+        height: 40vh;
+    }
+    
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Footer */
+/* Correcciones para el footer */
+
+footer {
+    background-color: var(--neutral-dark);
+    color: var(--neutral-light);
+    padding: 4rem 5% 2rem;
+    clear: both; /* Asegura que el footer no se superponga con elementos flotantes */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    gap: 2rem; /* Añadimos gap para mejor espaciado en modo responsivo */
+}
+
+.footer-logo {
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    min-width: 160px; /* Asegura un ancho mínimo para cada columna */
+    margin-bottom: 1.5rem; /* Espacio entre columnas en modo responsivo */
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+.footer-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0; /* Elimina el padding predeterminado de las listas */
+}
+
+.footer-column ul li {
+    list-style: none; /* Elimina los marcadores de lista */
+}
+
+.footer-column a {
+    color: var(--neutral-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--accent);
+}
+
+.footer-column p {
+    margin-bottom: 0.8rem;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Ajustes responsivos para el footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .footer-column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 3rem 5% 1.5rem;
+    }
+    
+    .footer-column h4 {
+        font-size: 1.1rem;
+    }
+    
+    .footer-bottom {
+        padding-top: 1.5rem;
+        font-size: 0.8rem;
+    }
+}
+/* Fin de los estilos del footer */
+
+:root {
+    --primary: #00B8C8;
+    --secondary: #F15A40;
+    --neutral-light: #FFFFFF;
+    --neutral-dark: #2E3A47;
+    --accent: #F4A261;
+}
+
+/* Estilos de Botones*/
+
+/* Estilo de botón arquitectónico */
+.btn-architect {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 28px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 184, 200, 0.2);
+    z-index: 1;
+  }
+  
+  .btn-architect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--accent);
+    z-index: -1;
+    transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  .btn-architect:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 184, 200, 0.3);
+  }
+  
+  .btn-architect:hover::before {
+    width: 100%;
+  }
+  
+  .btn-architect:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 184, 200, 0.2);
+  }
+  
+  .btn-text {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-architect:hover .btn-text {
+    transform: translateX(-5px);
+  }
+  
+  .btn-architect:hover .btn-icon {
+    transform: translateX(5px);
+  }
+  
+  /* Variante secundaria */
+  .btn-architect.secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    box-shadow: none;
+  }
+  
+  .btn-architect.secondary::before {
+    background-color: var(--primary);
+  }
+  
+  .btn-architect.secondary:hover {
+    color: white;
+  }
+  
+  /* Variante oscura */
+  .btn-architect.dark {
+    background-color: var(--neutral-dark);
+    box-shadow: 0 4px 12px rgba(46, 58, 71, 0.2);
+    border-radius: 15px;
+  }
+  
+  .btn-architect.dark::before {
+    background-color: #1a232d;
+  }
+  
+  .btn-architect.dark:hover {
+    box-shadow: 0 8px 20px rgba(46, 58, 71, 0.3);
+  }
+  
+  /* Variante grande */
+  .btn-architect.large {
+    padding: 16px 36px;
+    font-size: 1.1rem;
+    border-radius: 15px;
+  }
+  
+  /* Variante pequeña */
+  .btn-architect.small {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .btn-architect {
+      padding: 10px 24px;
+      font-size: 0.95rem;
+    }
+    
+    .btn-architect.large {
+      padding: 14px 32px;
+      font-size: 1.05rem;
+    }
+  }
+
+  /* Fin Estilos de Botones */

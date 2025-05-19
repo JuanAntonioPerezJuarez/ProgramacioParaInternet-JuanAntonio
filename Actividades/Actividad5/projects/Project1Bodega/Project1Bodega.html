@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodega Comercial - Detalle del Proyecto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="proyecto-detalle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../Project1Bodega/css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../images/icon.ico">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <div class="logo">
+            <img src="../../images/LogoOG.jfif" alt="" style="height: 10%; width: 10%;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="/services/services.html">Servicios</a></li>
+                <li><a href="/projects/proyectos.html">Proyectos</a></li>
+                <li><a href="/contact/contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-breadcrumb">
+                    <a href="index.html">Inicio</a> / 
+                    <a href="proyectos.html">Proyectos</a> / 
+                    <span>Residencial Los Altos</span>
+                </div>
+                <h1>Bodega Comercial</h1>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Zapopan, Jalisco</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-building"></i>
+                        <span>Comercial</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Marzo 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-ruler-combined"></i>
+                        <span>5,200 m²</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="project-gallery">
+        <div class="container">
+            <div class="gallery-main">
+                <img src="../Project1Bodega/RentaBodega/Bodega14.jpeg" id="BodegaRenta">
+            </div>
+            
+            <div class="gallery-controls">
+                <button class="gallery-nav prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="gallery-thumbnails">
+                    <img src="../Project1Bodega/RentaBodega/bodega1.jpeg" alt="Vista principal" class="active" onclick="changeImage(this.src)">
+                    <img src="../Project1Bodega/RentaBodega/bodega4.jpeg" alt="Vista interior" onclick="changeImage(this.src)">
+                    <img src="../Project1Bodega/RentaBodega/bodega2.jpeg" alt="Sala de estar" onclick="changeImage(this.src)">
+                    <img src="../Project1Bodega/RentaBodega/bodega10.jpeg" alt="Cocina" onclick="changeImage(this.src)">
+                    <img src="../Project1Bodega/RentaBodega/bodega7.jpeg" alt="Dormitorio" onclick="changeImage(this.src)">
+                    <img src="../Project1Bodega/RentaBodega/bodega5.jpeg" alt="Baño" onclick="changeImage(this.src)">
+                </div>
+                <button class="gallery-nav next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <div class="gallery-actions">
+                <button class="btn-secondary view-all-photos">
+                    <i class="fas fa-images"></i> Ver todas las fotos (10)
+                </button>
+                <div class="gallery-share">
+                    <span>Compartir:</span>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-content">
+                    <div class="details-section">
+                        <h2>Descripción del Proyecto</h2>
+                        <p>Bodega con Oficinas</p>
+                        <p>Es un proyecto de bodega con oficinas en Zapopan, Jalisco.</p>
+                        <p>El proyecto tiene una superficie de 5,200 m² y está ubicado en la calle 123.</p>
+                        <p>El proyecto tiene 3 pisos, con un total de 1,200 m² de construcción.</p>
+                    </div>
+                    
+                    <div class="details-section">
+                        <h2>Características</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fas fa-home"></i>
+                                <h3>3 Oficinas</h3>
+                                <p>150-280 m²</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-tree"></i>
+                                <h3>Áreas Verdes</h3>
+                                <p>1,200 m² de jardines</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-swimming-pool"></i>
+                                <h3>Servicio de Agua</h3>
+                                <p>Agua potable y agua de lluvia</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-dumbbell"></i>
+                                <h3>Electricidad</h3>
+                                <p>Acceso a CFE de 220 Volts</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-car"></i>
+                                <h3>Estacionamiento</h3>
+                                <p>2 cajones por unidad + visitas</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <h3>Seguridad</h3>
+                                <p>24/7 con acceso controlado</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="details-section">
+                        <h2>Especificaciones Técnicas</h2>
+                        <div class="specs-table">
+                            <div class="specs-row">
+                                <div class="specs-label">Estructura</div>
+                                <div class="specs-value">Concreto armado con sistema antisísmico</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-label">Fachada</div>
+                                <div class="specs-value">Combinación de piedra natural, cristal templado y paneles arquitectónicos</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-label">Instalaciones</div>
+                                <div class="specs-value">Hidráulica, sanitaria, eléctrica, voz y datos con materiales certificados</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-label">Acabados</div>
+                                <div class="specs-value">Pisos de mármol y madera de ingeniería, carpintería de diseño exclusivo</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-label">Tecnología</div>
+                                <div class="specs-value">Domótica integrada, sistema de seguridad inteligente</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-label">Sostenibilidad</div>
+                                <div class="specs-value">Certificación LEED Gold, sistema de captación pluvial, paneles solares</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="details-sidebar">
+                    
+                    
+                    <div class="sidebar-section">
+                        <h3>Ubicación</h3>
+                        <div class="location-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2910.521686179437!2d-103.406359!3d20.722921399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428af09c9d1646b%3A0x80f066ff8f2f7a89!2sSan%20Rafael%201600%2C%20Lomas%20del%20Bosque%2C%20Uag%2C%2045140%20Zapopan%2C%20Jal.!5e1!3m2!1ses!2smx!4v1747694931692!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <p class="location-address">
+                            <i class="fas fa-map-marker-alt"></i> San Rafael 1600, Lomas del Bosque, Uag, 45140 Zapopan, Jal.
+                        </p>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3>Equipo del Proyecto</h3>
+                        <ul class="team-list">
+                            <li>
+                                <span class="team-role">Arquitecto Principal:</span>
+                                <span class="team-name">Arq. Carlos Mendoza</span>
+                            </li>
+                            <li>
+                                <span class="team-role">Ingeniero Estructural:</span>
+                                <span class="team-name">Ing. Laura Sánchez</span>
+                            </li>
+                            <li>
+                                <span class="team-role">Diseño de Interiores:</span>
+                                <span class="team-name">Estudio Ramírez & Asociados</span>
+                            </li>
+                            <li>
+                                <span class="team-role">Paisajismo:</span>
+                                <span class="team-name">Verde Vertical S.A.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3>Descargas</h3>
+                        <ul class="download-list">
+                            <li>
+                                <a href="#" class="download-link">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Brochure del Proyecto</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="download-link">
+                                    <i class="fas fa-file-image"></i>
+                                    <span>Planos Arquitectónicos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="download-link">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>Especificaciones Técnicas</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-section cta-box">
+                        <h3>¿Interesado en este proyecto?</h3>
+                        <p>Contáctanos para obtener más información o agendar una visita.</p>
+                        <a href="contacto.html" class="btn-primary btn-block">
+                            <i class="fas fa-envelope"></i> Contactar ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects <i class="fas fa-play"></i>-->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Proyectos Relacionados</h2>
+            <div class="related-grid">
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="https://images.unsplash.com/photo-1600047509807-f8e8eca2c275?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Torre Panorama">
+                        <div class="related-overlay">
+                            <a href="#" class="btn-view">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <div class="related-info">
+                        <h3>Torre Panorama</h3>
+                        <p>Guadalajara, Jalisco</p>
+                    </div>
+                </div>
+                
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Residencial El Bosque">
+                        <div class="related-overlay">
+                            <a href="#" class="btn-view">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <div class="related-info">
+                        <h3>Residencial El Bosque</h3>
+                        <p>Tlajomulco, Jalisco</p>
+                    </div>
+                </div>
+                
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="https://images.unsplash.com/photo-1600607687644-c7f34b5063c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Condominio Las Cumbres">
+                        <div class="related-overlay">
+                            <a href="#" class="btn-view">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <div class="related-info">
+                        <h3>Condominio Las Cumbres</h3>
+                        <p>Puerto Vallarta, Jalisco</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para construir tu próximo proyecto?</h2>
+                <p>Nuestro equipo de expertos está listo para hacer realidad tu visión.</p>
+                <div class="cta-buttons">
+                    <a href="contacto.html" class="btn-primary">
+                        <i class="fas fa-phone"></i> Solicitar Consulta
+                    </a>
+                    <a href="proyectos.html" class="btn-outline">
+                        <i class="fas fa-building"></i> Ver Más Proyectos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="../../images/LogoOG.jfif" alt="Constructora Logo" style="width: 80%; height: 80%;">
+                    </div>
+                    <p>Construyendo el futuro con excelencia e innovación desde 1995.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="proyectos.html">Proyectos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Proyectos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Residenciales</a></li>
+                        <li><a href="#">Comerciales</a></li>
+                        <li><a href="#">Industriales</a></li>
+                        <li><a href="#">Infraestructura</a></li>
+                        <li><a href="#">Remodelaciones</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Américas 1254, Col. Providencia, Guadalajara, Jalisco</p>
+                    <p><i class="fas fa-phone"></i> +52 33 1234 5678</p>
+                    <p><i class="fas fa-envelope"></i> info@constructora.com</p>
+                    <div class="footer-newsletter">
+                        <h4>Suscríbete a nuestro boletín</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Tu correo electrónico">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Constructora. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos y condiciones</a>
+                    <a href="#">Mapa del sitio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Full Gallery Modal -->
+    <div class="full-gallery-modal" id="fullGalleryModal">
+        <div class="modal-header">
+            <h3>Galería: Residencial Los Altos</h3>
+            <span class="close-full-gallery">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="full-gallery-main">
+                <img src="" alt="Imagen de galería" id="fullGalleryMainImage">
+                <button class="gallery-nav prev-full"><i class="fas fa-chevron-left"></i></button>
+                <button class="gallery-nav next-full"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="full-gallery-thumbnails">
+                <!-- Thumbnails will be added dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="proyecto-detalle.js"></script>
+</body>
+</html>

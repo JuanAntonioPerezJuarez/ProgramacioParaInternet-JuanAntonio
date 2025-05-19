@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Arquitectura Inmobiliaria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="icon" type="image/x-icon" href="../images/icon.ico">
+    <link href="../style/contact.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación -->
+    <header>
+        <div class="logo">
+            <img src="../images/LogoOG.jfif" alt="" style="height: 10%; width: 10%;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="active">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="../projects/proyectos.html">Proyectos</a></li>
+                <li><a href="../contact/contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Estamos aquí para ayudarte</h1>
+            <p>Comunícate con nosotros para encontrar tu hogar ideal o para cualquier consulta inmobiliaria</p>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="icon-container">
+                        <i class="fas fa-map-marker-alt fa-lg"></i>
+                    </div>
+                    <h3>Visítanos</h3>
+                    <p>Av. Principal 123, Colonia Centro<br>Ciudad de México, CP 12345</p>
+                    <a href="#map-section" class="btn-architect small">
+                        <span class="btn-text">Ver en mapa</span>
+                        <i class="fas fa-arrow-right btn-icon"></i>
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="icon-container">
+                        <i class="fas fa-phone-alt fa-lg"></i>
+                    </div>
+                    <h3>Llámanos</h3>
+                    <p>+52 55 1234 5678<br>Lun-Vie: 9am - 6pm</p>
+                    <a href="tel:+525512345678" class="btn-architect small">
+                        <span class="btn-text">Llamar ahora</span>
+                        <i class="fas fa-phone btn-icon"></i>
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="icon-container">
+                        <i class="fas fa-envelope fa-lg"></i>
+                    </div>
+                    <h3>Escríbenos</h3>
+                    <p>info@inmobiliaria.com<br>ventas@inmobiliaria.com</p>
+                    <a href="mailto:info@inmobiliaria.com" class="btn-architect small">
+                        <span class="btn-text">Enviar email</span>
+                        <i class="fas fa-envelope btn-icon"></i>
+                    </a>
+                </div>
+                
+                <div class="contact-card whatsapp-card">
+                    <div class="icon-container">
+                        <i class="fab fa-whatsapp fa-lg"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>+52 55 8765 4321<br>Respuesta inmediata</p>
+                    <a href="https://wa.me/5587654321" class="btn-architect small">
+                        <span class="btn-text">Chatear ahora</span>
+                        <i class="fab fa-whatsapp btn-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Contáctanos</h2>
+                    <p>Completa el formulario y nos pondremos en contacto contigo lo antes posible</p>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" placeholder="Tu nombre completo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="tu@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" placeholder="+52 55 1234 5678">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="interest">Interés</label>
+                        <select id="interest">
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="compra">Comprar propiedad</option>
+                            <option value="venta">Vender propiedad</option>
+                            <option value="renta">Rentar propiedad</option>
+                            <option value="inversion">Inversión inmobiliaria</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" rows="5" placeholder="Cuéntanos más sobre lo que estás buscando..."></textarea>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn-architect">
+                            <span class="btn-text">Enviar mensaje</span>
+                            <i class="fas fa-paper-plane btn-icon"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-media-section">
+        <div class="container">
+            <h2>Síguenos en redes sociales</h2>
+            <p>Mantente al día con nuestras últimas propiedades, consejos inmobiliarios y eventos</p>
+            
+            <div class="social-grid">
+                <a href="#" class="social-card facebook">
+                    <div class="social-icon">
+                        <i class="fab fa-facebook-f fa-lg"></i>
+                    </div>
+                    <h3>Facebook</h3>
+                    <p>@InmobiliariaOficial</p>
+                </a>
+                
+                <a href="#" class="social-card instagram">
+                    <div class="social-icon">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>@inmobiliaria_mx</p>
+                </a>
+                
+                <a href="#" class="social-card twitter">
+                    <div class="social-icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </div>
+                    <h3>Twitter</h3>
+                    <p>@InmobiliariaMX</p>
+                </a>
+                
+                <a href="#" class="social-card linkedin">
+                    <div class="social-icon">
+                        <i class="fab fa-linkedin-in fa-lg"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Inmobiliaria Oficial</p>
+                </a>
+                
+                <a href="#" class="social-card youtube">
+                    <div class="social-icon">
+                        <i class="fab fa-youtube fa-lg"></i>
+                    </div>
+                    <h3>YouTube</h3>
+                    <p>Inmobiliaria Channel</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map-section" class="map-section">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.661409889348!2d-99.16869872558839!3d19.427023841887464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sEl%20%C3%81ngel%20de%20la%20Independencia!5e0!3m2!1ses-419!2smx!4v1682458332935!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <h2>Suscríbete a nuestro newsletter</h2>
+                    <p>Recibe las mejores ofertas inmobiliarias y contenido exclusivo directamente en tu bandeja de entrada.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button type="submit" class="btn-architect">
+                        <span class="btn-text">Suscribirse</span>
+                        <i class="fas fa-arrow-right btn-icon"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/LogoOG.jfif" alt="" style="height: 90%; width: 45%;">   
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Estudio</h4>
+                    <ul>
+                        <li><a href="#">Mision y Vision</a></li>
+                        <li><a href="/team/team.html">Nuestros Socios</a></li>
+                        <li><a href="#">Historia</a></li>
+                        <li><a href="#">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Construccion</a></li>
+                        <li><a href="#">Compra y Venta de Inmuebles</a></li>
+                        <li><a href="#">Diseño de Interiores</a></li>
+                        <li><a href="#">Notaria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contacto</h4>
+                    <p>inmobiliaria@moby.com.mx</p>
+                    <p>+52 </p>
+                    <p>Direccion</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Estudio de Arquitectura. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
